@@ -1,63 +1,63 @@
 # 🛍️ E-Commerce Data Pipeline & Analytics (Erigo Store)
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
-![Pandas](https://img.shields.io/badge/Pandas-Data_Manipulation-150458.svg)
+![Pandas](https://img.shields.io/badge/Pandas-Manipulasi_Data-150458.svg)
 ![SQLite](https://img.shields.io/badge/SQLite-Database-003B57.svg)
 ![Tableau](https://img.shields.io/badge/Tableau-Business_Intelligence-E97627.svg)
-![Status](https://img.shields.io/badge/Status-Active_Development-brightgreen.svg)
+![Status](https://img.shields.io/badge/Status-Dalam_Pengembangan-brightgreen.svg)
 
-An **end-to-end Data Engineering and Business Intelligence portfolio project** analyzing e-commerce product data from Erigo Store (a major Indonesian fashion retailer). This project demonstrates the complete data lifecycle: from raw data extraction (Scraping) to structured storage (SQLite), and actionable business insights (Tableau).
+Sebuah **proyek portofolio End-to-End Data Engineering dan Business Intelligence** yang menganalisis data katalog produk *e-commerce* dari Erigo Store (salah satu *brand fashion* terbesar di Indonesia). Proyek ini mendemonstrasikan siklus hidup data secara lengkap: mulai dari ekstraksi data mentah (Scraping), penyimpanan terstruktur (SQLite), hingga wawasan bisnis yang dapat ditindaklanjuti (Tableau).
 
-## 🚀 Project Overview
+## 🚀 Gambaran Proyek
 
-The goal of this project is to build a robust pipeline that automates the collection, cleaning, and analysis of e-commerce catalog data to answer key business questions such as pricing strategies, discount depths, stock-out risks, and product categorizations.
+Tujuan dari proyek ini adalah membangun *pipeline* yang mengotomatisasi pengumpulan, pembersihan, dan analisis data katalog *e-commerce* untuk menjawab pertanyaan bisnis utama seperti strategi harga, kedalaman diskon, risiko kehabisan stok (*stock-out*), dan kategorisasi produk.
 
-### 🏗️ Pipeline Architecture
+### 🏗️ Arsitektur Pipeline
 
-1. **Data Collection (Scraping):** Custom Python scraper interacting with Shopify's public `/products.json` endpoint with retry logic, exponential backoff, and pagination.
-2. **Data Engineering (ETL):** Cleaning anomalies, handling missing values (inferring categories from titles), and feature enrichment (calculating discount percentages, detecting collaborations like JKT48/MPL).
-3. **Data Storage:** Structuring the flattened data into a relational database (`SQLite`) with normalized tables.
-4. **Business Intelligence:** Interactive Tableau dashboards to visualize catalog health, pricing segments, and stock risks. *(In Progress)*
-5. **Data Science:** Price clustering and text analysis on product naming conventions. *(Upcoming)*
+1. **Pengumpulan Data (Scraping):** *Scraper* Python kustom yang berinteraksi dengan *endpoint* publik `/products.json` milik Shopify. Dilengkapi dengan logika *retry*, *exponential backoff*, dan *pagination*.
+2. **Data Engineering (ETL):** Pembersihan anomali, penanganan nilai yang kosong (menyimpulkan kategori dari judul produk), dan pengayaan fitur (menghitung persentase diskon, mendeteksi produk kolaborasi seperti JKT48/MPL).
+3. **Penyimpanan Data:** Menyusun data yang telah diratakan (*flattened*) ke dalam *database* relasional (`SQLite`) dengan tabel-tabel yang sudah dinormalisasi.
+4. **Business Intelligence:** *Dashboard* interaktif Tableau untuk memvisualisasikan kesehatan katalog, segmentasi harga, dan risiko stok. *(Sedang Dikerjakan)*
+5. **Data Science:** *Clustering* harga dan analisis teks pada konvensi penamaan produk. *(Segera Hadir)*
 
-## 📂 Repository Structure
+## 📂 Struktur Repositori
 
 ```text
 ├── scraper.py                 # Tahap 1: Python scraper (Shopify JSON endpoint)
-├── 02_data_engineering.py     # Tahap 2: Data cleaning, enrichment & SQLite export
-├── requirements.txt           # Python dependencies
-├── .gitignore                 # Excludes raw heavy files and caches
-├── erigo_store.db             # Output: SQLite Database (Cleaned Data)
-└── erigo_*_clean.csv          # Output: Cleaned CSVs ready for Tableau
+├── 02_data_engineering.py     # Tahap 2: Pembersihan data, pengayaan & ekspor SQLite
+├── requirements.txt           # Dependensi Python
+├── .gitignore                 # Mengabaikan file mentah yang besar dan cache
+├── erigo_store.db             # Output: SQLite Database (Data Bersih)
+└── erigo_*_clean.csv          # Output: CSV Bersih yang siap digunakan untuk Tableau
 ```
 
-## 📊 Key Findings (Initial Data)
+## 📊 Temuan Utama (Data Awal)
 
-From the recent extraction of **309 unique products and 1,623 variants**:
-- **Aggressive Discounting:** 95.5% of the catalog is currently on sale.
-- **Average Discount Depth:** The average price cut across discounted items is **43.2%**.
-- **Price Segmentation:** The brand heavily dominates the "Mid" tier (Rp100k - Rp200k), making up ~58% of the catalog.
-- **Collaborations:** Successfully detected and isolated special collaboration items (e.g., JKT48, M6, MPL) which exhibit different pricing behaviors.
+Dari hasil ekstraksi data terbaru yang mencakup **309 produk unik dan 1.623 varian**:
+- **Pemberian Diskon yang Agresif:** 95.5% dari katalog saat ini sedang diskon.
+- **Rata-rata Kedalaman Diskon:** Rata-rata potongan harga di seluruh barang diskon adalah **43.2%**.
+- **Segmentasi Harga:** *Brand* ini sangat mendominasi segmen "Menengah" (Rp100rb - Rp200rb), yang mencakup ~58% dari seluruh katalog.
+- **Kolaborasi Khusus:** Berhasil mendeteksi dan memisahkan item kolaborasi khusus (contoh: JKT48, M6, MPL) yang menunjukkan perilaku harga yang berbeda.
 
-## 🛠️ How to Run
+## 🛠️ Cara Menjalankan
 
-1. Clone this repository:
+1. *Clone* repositori ini:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/JonathanMangiring/erigo-data-pipeline.git
+   cd erigo-data-pipeline
    ```
-2. Install dependencies:
+2. *Install dependensi*:
    ```bash
    pip install -r requirements.txt
    ```
-3. Run the pipeline:
+3. Jalankan *pipeline*:
    ```bash
-   # Step 1: Collect raw data
+   # Langkah 1: Kumpulkan data mentah
    python scraper.py
 
-   # Step 2: Clean and load to Database
+   # Langkah 2: Bersihkan dan muat ke Database
    python 02_data_engineering.py
    ```
 
-## 👨‍💻 Author
-Built as a Data Engineering & Analytics portfolio piece. Connect with me to discuss data!
+## 👨‍💻 Penulis
+Dibangun sebagai karya portofolio Data Engineering & Analytics. Mari terhubung untuk berdiskusi seputar data!

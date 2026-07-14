@@ -6,7 +6,7 @@ Project ini aku buat sebagai **portfolio Data Engineering dan Business Intellige
 
 Semua proses dari awal narik data (scraping) sampai datanya siap dibikin visualisasi (Tableau) aku kerjain end-to-end di project ini.
 
-## 🚀 Apa Aja yang Dikerjain?
+## 🚀 Apa aja yang Dikerjain?
 
 Project ini dibagi jadi beberapa tahap biar rapi:
 

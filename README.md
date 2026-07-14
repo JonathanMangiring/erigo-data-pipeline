@@ -4,7 +4,7 @@ Halo! 👋 Selamat datang di repositori proyek analisis data saya.
 
 Proyek ini disusun sebagai bagian dari **penelitian dan portofolio Data Engineering serta Business Intelligence**, dengan mengaplikasikan konsep-konsep akademis ke dalam permasalahan *real-world*. Penelitian ini mengambil studi kasus pada Erigo Store, salah satu *brand fashion* lokal terbesar di Indonesia, untuk menganalisis strategi penetapan harga (*pricing strategy*), kedalaman diskon, dan ketersediaan stok produk mereka.
 
-Seluruh proses dalam penelitian ini—mulai dari tahap ekstraksi data mentah (*scraping*), pemrosesan dan pembersihan data (*data engineering*), hingga tahapan visualisasi akhir (*Business Intelligence*)—dikerjakan secara *end-to-end*.
+Seluruh proses dalam penelitian ini-mulai dari tahap ekstraksi data mentah (*scraping*), pemrosesan dan pembersihan data (*data engineering*), hingga tahapan visualisasi akhir (*Business Intelligence*)-dikerjakan secara *end-to-end*.
 
 ## 🚀 Tahapan Penelitian
 

@@ -1,0 +1,23 @@
+# Dependencies — Erigo Store BI + DS Pipeline
+
+# Core
+requests>=2.31.0
+pandas>=2.0.0
+
+# Database
+# sqlite3 sudah built-in di Python
+
+# Data Science (untuk Tahap 4)
+scikit-learn>=1.3.0
+numpy>=1.24.0
+
+# NLP (untuk Tahap 4 text analysis)
+nltk>=3.8.0
+
+# Visualization (untuk script analisis)
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Jupyter Notebooks (Tahap 5)
+notebook>=7.0.0
+ipykernel>=6.0.0

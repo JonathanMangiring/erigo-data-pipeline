@@ -1,0 +1,50 @@
+# ─────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ─────────────────────────────────────────────
+# Data files — RAW (terlalu besar / tidak perlu di-track)
+# ─────────────────────────────────────────────
+erigo_products_raw.json       # 2.4MB raw JSON — bisa di-regenerate dengan scraper.py
+
+# ─────────────────────────────────────────────
+# Database binary (bisa di-regenerate)
+# ─────────────────────────────────────────────
+# erigo_store.db              # uncomment ini kalau mau exclude .db
+
+# ─────────────────────────────────────────────
+# Tableau workbook cache
+# ─────────────────────────────────────────────
+*.twbx
+*.tde
+*.hyper
+
+# ─────────────────────────────────────────────
+# Jupyter checkpoints
+# ─────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ─────────────────────────────────────────────
+# Environment
+# ─────────────────────────────────────────────
+.env
+.venv/
+venv/
+ENV/
+
+# ─────────────────────────────────────────────
+# OS
+# ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
